@@ -92,9 +92,9 @@ module.exports = [["200.gif","GHTOsGx.gif","cube.gif"],["4keHFZ3.gif","Antara-s.
 const gifMap = __webpack_require__(/*! ./images.map */ "./src/images.map.js");
 
 setInterval(() => {
-    const randomBackground = `/images/background/${gifMap[0][Math.floor(Math.random() * gifMap[0].length)]}`;
-    const randomFirstOverlay = `/images/overlayFirst/${gifMap[1][Math.floor(Math.random() * gifMap[1].length)]}`;
-    const randomSecondOverlay = `/images/overlaySecond/${gifMap[2][Math.floor(Math.random() * gifMap[2].length)]}`;
+    const randomBackground = `./images/background/${gifMap[0][Math.floor(Math.random() * gifMap[0].length)]}`;
+    const randomFirstOverlay = `./images/overlayFirst/${gifMap[1][Math.floor(Math.random() * gifMap[1].length)]}`;
+    const randomSecondOverlay = `./images/overlaySecond/${gifMap[2][Math.floor(Math.random() * gifMap[2].length)]}`;
 
     return document.body.innerHTML = `
         <div class="cover">

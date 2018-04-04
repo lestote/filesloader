@@ -12,4 +12,4 @@ setInterval(() => {
             <img id="bg2" src="${randomSecondOverlay}"></img>
         </div>
     `;
-}, 500);
+}, 1);

@@ -18,7 +18,7 @@ const start = (files, entry) => files.map(file => getFilesInDir(`${entry}/${file
 
 try {
     const entry = path.resolve(__dirname, '../src/images');
-    const gifFile = path.resolve(__dirname, '../src/gif.map.js');
+    const gifFile = path.resolve(__dirname, '../src/images.map.js');
 
     fs.readdir(entry, (err, files) => {
         const content = `module.exports = ${JSON.stringify(start(files, entry))};`;

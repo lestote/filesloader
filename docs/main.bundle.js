@@ -71,10 +71,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/gif.map.js":
-/*!************************!*\
-  !*** ./src/gif.map.js ***!
-  \************************/
+/***/ "./src/images.map.js":
+/*!***************************!*\
+  !*** ./src/images.map.js ***!
+  \***************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -89,7 +89,7 @@ module.exports = [["200.gif","GHTOsGx.gif","cube.gif"],["4keHFZ3.gif","Antara-s.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-const gifMap = __webpack_require__(/*! ./gif.map */ "./src/gif.map.js");
+const gifMap = __webpack_require__(/*! ./images.map */ "./src/images.map.js");
 
 setInterval(() => {
     const randomBackground = `/images/background/${gifMap[0][Math.floor(Math.random() * gifMap[0].length)]}`;

@@ -1,4 +1,4 @@
-const gifMap = require('./gif.map');
+const gifMap = require('./images.map');
 
 setInterval(() => {
     const randomBackground = `/images/background/${gifMap[0][Math.floor(Math.random() * gifMap[0].length)]}`;

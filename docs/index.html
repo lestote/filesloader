@@ -4,6 +4,89 @@
     <title>VHSWAVES | DREAMFM</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            background-color: #000000;
+            overflow-x:hidden;
+        }
+        .container {
+            padding: 0;
+            width: 100%;
+            margin: 0px;
+        }
+
+        #static {
+            position:absolute;
+            z-index:-5;
+            opacity: 1.0;
+        }
+
+        #bg1 {
+            position:absolute;
+            z-index:-1;
+        }
+
+        #bg1_ {
+            position:absolute;
+            z-index:-1;
+        }
+
+        #bg2 {
+            position:absolute;
+            z-index:-1;
+        }
+
+        div.cover {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+        }
+
+        img.cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            min-width: 50%;
+            min-height: 50%;
+            overflow-x: hidden;
+        }
+
+        img#bg1{
+            opacity:0.0;
+            -moz-transition: opacity 1s; /* Firefox 4 */
+            -webkit-transition: opacity 1s; /* Safari and Chrome */
+            -o-transition: opacity 1s;
+            transition: opacity 1s;
+        }
+        img#bg2{
+            opacity:0.0;
+            -moz-transition: opacity 1s; /* Firefox 4 */
+            -webkit-transition: opacity 1s; /* Safari and Chrome */
+            -o-transition: opacity 1s;
+            transition: opacity 1s;
+        }
+    </style>
 </head>
-<body id="app"><script type="text/javascript" src="main.bundle.js"></script></body>
+<body id="app">
+    <div class="container">
+        <div class="cover">
+            <div id="background"></div>
+        </div>
+        <div class="cover">
+            <div id="cover1"></div>
+        </div>
+        <div class="cover">
+            <div id="cover2"></div>
+        </div>
+    </div>
+<script type="text/javascript" src="main.bundle.js"></script></body>
 </html>

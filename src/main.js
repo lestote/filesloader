@@ -15,8 +15,14 @@ const cover2 = () => {
     return document.getElementById('cover2').innerHTML = `<img style="opacity: 0.25" class="cover" src="${randomSecondOverlay}"></img>`;
 };
 
+const cover3 = () => {
+    const randomOtherOverlay = `./images/overlayOther/${gifMap[3][Math.floor(Math.random() * gifMap[3].length)]}`;
+    return document.getElementById('cover2').innerHTML = `<img style="opacity: 0.25" class="cover" src="${randomOtherOverlay}"></img>`;
+};
+
 
 
 setInterval(() => background(), 3000);
 setInterval(() => cover1(), 500);
 setInterval(() => cover2(), 250);
+setInterval(() => cover3(), 7000);

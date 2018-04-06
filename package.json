@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "webpack": "webpack",
-    "build": "node script/index.js && yarn webpack"
+    "build": "yarn && node script/index.js && yarn webpack"
   },
   "devDependencies": {
     "babel-loader": "^7.1.4",

@@ -1,21 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
-const getFilesInDir = (dir, file) => {
-    if (!fs.lstatSync(dir).isDirectory()) return;
-    return fs.readdirSync(dir, (err, files) => {
-        if (err) {
-            console.error(err);
-            return;
-        }
-
-        return files
+const getFilesInDir = (dir, file) => fs.readdirSync(dir, (err, files) => files
             .filter((filename) => filename.match(/\.gif$/))
-            .map((filename) => filename);
-    });
-};
+            .map((filename) => filename));
 
-const start = (files, entry) => files.map(file => getFilesInDir(`${entry}/${file}`, file));
+const start = (files, entry) => files
+    .filter(file => fs.lstatSync(`${entry}/${file}`).isDirectory())
+    .map(file => getFilesInDir(`${entry}/${file}`, file));
 
 try {
     const entry = path.resolve(__dirname, '../src/images');

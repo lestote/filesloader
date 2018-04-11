@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const getFilesInDir = (dir, file) => {
+    if (!fs.lstatSync(dir).isDirectory()) return;
     return fs.readdirSync(dir, (err, files) => {
         if (err) {
             console.error(err);
